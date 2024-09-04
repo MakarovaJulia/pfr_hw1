@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="./styles/main.css" rel="stylesheet">
+    <style>
+        @font-face {
+         font-family: "Roboto"; 
+         src: url('./assets/Roboto/Roboto-Regular.ttf');
+        }
+    </style>
+    <script src="list.js" defer></script>
+    <script src="navigate.js" defer></script>
+  </head>
+  <body>
+        <header>
+            <div class="header_wrapper">
+                <h1>ВЗН УП (Расход)</h1>
+            <div class="btns_wrapper">
+                <button onclick="navigateToPage('filter.html')" class="btn_round btn_blue">
+                    <img class="header_btn_icon" src="./assets/filters.svg" alt="filters"/>
+                    Поиск
+                </button>
+                <button class="btn_round btn_blue">
+                    <img class="header_btn_icon" src="./assets/add.svg" alt="add"/>
+                    Создать
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="list_wrapper">
+            <ul id="item_list">
+            </ul>
+            </div>
+        </main>
+        <footer>
+            <button onclick="navigateToPage('index.html')" class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/menu_24px.svg" alt="menu_24px"/>
+                Меню
+            </button>
+            <button class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/scanner.svg" alt="scanner"/>
+                Сканер
+            </button>
+            <button onclick="navigateToPage('index.html')"  class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/arrow_back_24px.svg" alt="arrow_back_24px"/>
+                Назад
+            </button>
+        </footer>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+@import '_colors.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Roboto;
+    background-color: $color-background-gray-main;
+}
+
+header{
+    padding-left: 8px;
+    background-color: transparent;
+    border-bottom: 2px solid $color-outline-gray-border;
+    background-color: $color-background-blue;
+    position: sticky;
+    top: 0;
+    & .close_btn{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        font-size: 4rem;
+        margin: 10px;
+        .close_btn_image{
+            width: 4rem;
+        }
+    }
+    & .header_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        & .btns_wrapper{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            .header_btn_icon{
+                width: 2rem;
+            }
+        }
+    }
+}
+
+p{
+    font-size: 2em;
+    margin: 2rem;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    gap: 5px
+}
+
+h2{
+    margin: 0;
+}
+
+h1{
+    font-size: 3em;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    & .main_content_wrapper{
+        flex-grow: 1;
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        .navigation_btn{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            font-size: 1.2em;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            .navigation_icon{
+                min-width: 4em;
+            }
+        }
+    }
+    & .form_wrapper{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: inherit;
+            margin: 20px;
+            .input_block{
+                width: inherit;
+                position: relative;
+                display: flex;
+                .icon-check{
+                     width: 20px;
+                    margin-right: 10px;
+
+                }
+            }
+            label{
+                background-color: $color-background-gray-modal;
+                width: fit-content;
+                position: absolute;
+                margin-left: 20px;
+                font-size: 2em;
+            }
+            input{
+                width: 100%;
+                height: 100px;
+                padding: 5px;
+                background-color: transparent;
+                border: 2px solid $color-outline-gray-border;
+                border-radius: 4px;
+                min-height: 50px;
+                min-width: 40vw;
+                margin-top: 10px;
+            }
+            .btn_block{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    & .list_wrapper{
+        flex-grow: 1;
+        margin: 10px;
+        border: 1px solid $color-outline-gray-border;
+        border-radius: 8px;
+        overflow: auto;
+        & .list_item{
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $color-outline-gray-border;
+            padding: 10px;
+            h2{
+                margin: 0;
+            }
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.btn_round{
+    font-size: 3em;
+    padding: 16px 24px;
+    border-radius: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn_blue{
+    background-color: $color-blue-primary-400;
+    color: $color-background-gray-modal;
+    border: 1px solid $color-blue-primary-400;
+}
+
+.btn_gray{
+    background-color: transparent;
+    border: 1px solid $color-outline-gray-border;
+    color: $color-blue-primary-400;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 -1px 0.4em $color-outline-gray-light;
+    background-color: $color-background-gray-main;
+    position: sticky;
+    bottom: 0;
+}
+
+.btn_footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 2.5em;
+    background-color: transparent;
+    border: none;
+    .footer_btn_icon{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .btn_footer{
+        font-size: 1em;
+        .footer_btn_icon{
+            width: 8%;
+        } 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    p{
+        font-size: 1.5em;
+        margin: 1.5rem;
+    }
+    h1{
+        font-size: 2em;
+    }
+    header {
+    & .close_btn{
+        font-size: 2rem;
+        .close_btn_image{
+                width: 2rem;
+        }
+    }
+    & .header_wrapper .btns_wrapper .header_btn_icon{
+                width: 1rem;
+        }
+    }
+    main .main_content_wrapper .navigation_btn{
+        font-size: 1em;
+        .navigation_icon{
+            min-width: 3em;
+        }
+    }
+    main .form_wrapper{
+        width: 42vw;
+        form .input_block{
+            label{
+                font-size: 1em;
+            }
+            input{
+                height: 50px;
+            }
+        }
+    }
+    .btn_round{
+        font-size: 1em;
+    }
+    .btn_footer{
+        font-size: 1.2em;
+        .footer_btn_icon{
+            width: 10%;
+        } 
+    }
+}

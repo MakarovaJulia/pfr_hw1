@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="./styles/main.css" rel="stylesheet">
+    <style>
+        @font-face {
+         font-family: "Roboto"; 
+         src: url('./assets/Roboto/Roboto-Regular.ttf');
+        }
+    </style>
+    <script src="navigate.js" defer></script>
+  </head>
+  <body>
+        <header>
+            <h1>Задачи</h1>
+        </header>
+        <main>
+            <div class="main_content_wrapper">
+                <button class="navigation_btn">
+                    <img class="navigation_icon" src="./assets/house.svg" alt="setting_1_icon"/>
+                    <p>Складской учет</p>
+                </button>
+                <button class="navigation_btn" onclick="navigateToPage('menu_accounting.html')">
+                    <img class="navigation_icon" src="./assets/factory.svg" alt="setting_2_icon"/>
+                    <p>Учет в производстве</p>
+                </button>
+            </div>
+        </main>
+        <footer>
+            <button onclick="navigateToPage('index.html')" class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/menu_24px.svg" alt="menu_24px"/>
+                Меню
+            </button>
+            <button class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/scanner.svg" alt="scanner"/>
+                Сканер
+            </button>
+            <button onclick="navigateToPage('index.html')"  class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/arrow_back_24px.svg" alt="arrow_back_24px"/>
+                Назад
+            </button>
+        </footer>
+  </body>
+</html>

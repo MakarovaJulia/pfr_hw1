@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="./styles/main.css" rel="stylesheet">
+    <style>
+        @font-face {
+         font-family: "Roboto"; 
+         src: url('./assets/Roboto/Roboto-Regular.ttf');
+        }
+    </style>
+    <script src="form_validation.js" defer></script>
+    <script src="navigate.js" defer></script>
+  </head>
+  <body>
+        <header>
+            <div>
+                <button onclick="navigateToPage('index.html')" class="close_btn">
+                    <img class="close_btn_image" src="./assets/close.svg" alt="close"/>
+                    Фильтр ВЗН УП
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="form_wrapper">
+                <form id="filter_form">
+                    <div class="input_block">
+                        <label for="number">
+                            Номер ВЗН
+                            <img class="icon-check" src="./assets/icon-check.svg"/>
+                        </label> 
+                        <input id="number" />
+                    </div>
+                    <div class="input_block">
+                        <label for="sender">
+                            Отправитель
+                            <img class="icon-check" src="./assets/icon-check.svg"/>
+                        </label> 
+                        <input id="sender" />
+                    </div>
+                    <div class="input_block">
+                        <label for="reciever">
+                            Получатель
+                            <img class="icon-check" src="./assets/icon-check.svg"/>
+                        </label> 
+                        <input id="reciever" />
+                    </div>
+                    <div class="input_block">
+                        <label for="date">
+                            Дата принятия (период)
+                            <img class="icon-check" src="./assets/icon-check.svg"/>
+                        </label> 
+                        <input id="date" />
+                    </div>
+                    <div class="btn_block">
+                        <button type="submit" class="btn_round btn_blue" >Поиск</button>
+                        <button type="button" onclick="navigateToPage('menu_accounting.html')" class="btn_round btn_gray">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <button onclick="navigateToPage('index.html')" class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/menu_24px.svg" alt="menu_24px"/>
+                Меню
+            </button>
+            <button class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/scanner.svg" alt="scanner"/>
+                Сканер
+            </button>
+            <button onclick="navigateToPage('index.html')"  class="btn_footer">
+                <img class="footer_btn_icon" src="./assets/arrow_back_24px.svg" alt="arrow_back_24px"/>
+                Назад
+            </button>
+        </footer>
+  </body>
+</html>
